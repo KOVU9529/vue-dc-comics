@@ -16,27 +16,27 @@ export default {
         return {
             icons:[
                 {
-                    img:'../assets/img/buy-comics-digital-comics.png',
+                    img:require('../assets/img/buy-comics-digital-comics.png'),
                     text:'DIGITAL COMICS',
                     a:'#'
                 },
                 {
-                    img:'../assets/img/buy-merchandise.png',
+                    img:require('../assets/img/buy-comics-merchandise.png'),
                     text:'DC MERCHANDISE',
                     a:'#'
                 },
                 {
-                    img:'../assets/img/buy-subscriptions.png',
+                    img:require('../assets/img/buy-comics-subscriptions.png'),
                     text:'SUBSCRIPTION',
                     a:'#'
                 },
                 {
-                    img:'../assets/img/buy-comics-shop-locator.png',
+                    img:require('../assets/img/buy-comics-shop-locator.png'),
                     text:'COMIC SHOP LOCATOR',
                     a:'#'
                 },
                 {
-                    img:'../assets/img/buy-dc-power-visa.svg',
+                    img:require('../assets/img/buy-dc-power-visa.svg'),
                     text:'DC POWER VISA',
                     a:'#'
                 }
@@ -47,19 +47,29 @@ export default {
 </script>
 <style lang="scss" scoped>
 div{
-    height: 300px;
+    position: relative;
+    z-index: 12;
+    height: 130px;
     background-color: #0182fa;
     ul{
+        height: 100%;
         list-style-type: none;
         display: flex;
+        justify-content: center;
         li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
-
           a{
             text-decoration: none;
             color: white;
            }
         }
+    }
+    img{
+        width: 60px;
+        padding: 0 10px;
     }
 }
 </style>

@@ -1,7 +1,6 @@
 <template>
     <div class="container">
-       
-            <div class="listOne">
+        <div class="listOne">
              <ul class="first">
             <li class="title">
                 DC COMICS
@@ -39,11 +38,10 @@
             </li>
         </ul>
         </div>
+        <div class="dc">
+            
         </div>
-        
-        
-   
-    
+    </div>
 </template>
 <script>
 export default {
@@ -164,28 +162,41 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container{
-
+    position: relative;
     background-image: url(../assets/img/footer-bg.jpg);
-    height: 300px;
+    height: 350px;
     display: flex;
-    
-
+    padding: 20px;
         .listTwo{
-        display: flex;
+            padding: 0 20px;
+            display: flex;
         }
         ul{
-           list-style-type: none;
+            padding: 0 20px;
+            list-style-type: none;
              li{
+                 margin-bottom: 5px;
                &.title{
-                color: white;
-               }
-                 a{
-                text-decoration: none;
-                color: #737069;
+                    color: white;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                a{
+                   text-decoration: none;
+                   color: #737069;
+                   font-size: 15px;
                 }
             }
         }
-    
-    
+    .dc{
+        background-size: contain;
+        background-image:url(../assets/img/dc-logo-bg.png);        
+        position: absolute;
+        z-index: 10;
+        top: -25%;
+        left: 60%;
+        height: 500px;
+        width: 500px;
+    }
 }
 </style>

@@ -58,7 +58,7 @@ export default {
                  {
                     text:'FANS',
                     a:'#',
-                    current:true
+                    current:false
                 },
                  {
                     text:'NEWS',
@@ -108,5 +108,8 @@ header{
             }
         }
     }
+    img{
+        padding: 30px
+    };
 }
 </style>
