@@ -5,12 +5,11 @@
         </div>
         <nav class="navHeader">
              <ul>
-                <li v-for="link,index in links" :key="index"  >
-                    <a :href="link.a" :class="{'active' : link.current}">{{link.text}}</a> 
+                <li   v-for="link,index in links" :key="index"  >
+                    <a  @click="active(index)" :href="link.a" :class="{'active' : index === currentActiveElement}">{{link.text}}</a> 
                 </li>
             </ul>
         </nav>
-           
     </header>
 </template>
 
@@ -18,60 +17,57 @@
 export default {
     name:"HeaderComp",
     data(){
+        
         return {
+            currentActiveElement:0,
             links:[
                 {
                     text:'CARACTERS',
                     a:'#',
-                    current:false
                 },
                  {
                     text:'COMICS',
-                    a:'#',
-                    current:true
+                    a:'#',   
                 },
                  {
                     text:'MOVIES',
                     a:'#',
-                    current:false
                 },
                 {
                     text:'TV',
                     a:'#',
-                    current:false
                 },
                  {
                     text:'GAMES',
                     a:'#',
-                    current:false
                 },
                  {
                     text:'COLLECTIBLES',
                     a:'#',
-                    current:false
                 },
                  {
                     text:'VIDEOS',
                     a:'#',
-                    current:false
                 },
                  {
                     text:'FANS',
                     a:'#',
-                    current:false
                 },
                  {
                     text:'NEWS',
                     a:'#',
-                    current:false
                 },
                  {
                     text:'SHOP',
                     a:'#',
-                    current:false
                 }
             ],
         };
+    },
+    methods:{
+        active (index){
+          this.currentActiveElement=index;
+        }
     }
 }
 </script>
@@ -93,7 +89,7 @@ header{
                 display: flex;
                 align-items: center;
                 padding: 0 20px;
-            a{
+             a{
                 height: 100%;
                 display: flex;
                 align-items: center;
@@ -102,14 +98,13 @@ header{
                 &.active{
                 color: #4f93fa;
                 border-bottom:3px solid  #4f93fa;
-            }
-            }
-            
+             }
             }
         }
     }
     img{
         padding: 30px
     };
+}
 }
 </style>
