@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <HeaderComp />
-    <MainComp />
+    <MainComp/>
+    <DcList />
     <MainComp2 />
     <FooterEnd />
     <FooterEnd2 />
@@ -12,6 +13,7 @@
 <script>
 import HeaderComp from './components/HeaderComp.vue';
 import MainComp from './components/MainComp.vue';
+import DcList from './components/DcList.vue';
 import MainComp2 from './components/MainComp2.vue';
 import FooterEnd from './components/FooterEnd.vue';
 import FooterEnd2 from './components/FooterEnd2.vue';
@@ -21,6 +23,7 @@ export default {
   components: {
     HeaderComp,
     MainComp,
+    DcList,
     MainComp2,
     FooterEnd,
     FooterEnd2

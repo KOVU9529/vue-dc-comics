@@ -1,20 +1,19 @@
 <template>
     <div>
-        <!--Aggiunta di card successive-->
+        <!--Jumbotron-->
     </div>
 </template>
 
 <script>
 export default {
     name:"MainComp",
-    setup() {
-        
-    },
 }
 </script>
 <style lang="scss" scoped>
 div{
     height: 300px;
-    background-color: #1c1c1c;
+    background-image:url(../assets/img/jumbotron.jpg);
+    background-position: top;
+    background-size: cover;
 }
 </style>
